@@ -24,11 +24,11 @@ app.use((req, res, next) => {
     res.header('Allow', 'GET, POST, OPTIONS, PUT, DELETE');
     next();
 });
-
+const port = process.env.PORT || 3900;
 
 /*ADICIÓN DE PREFIJOS*/
 app.use('/', comment_routes);
 app.use('/form', suggest_routes)
-app.listen(3900, () => (console.log(`Example app listening at http://localhost:3900`)))
+app.listen(port, () => (console.log(`Example app listening at http://localhost:3900`)))
 /*EXPORTACIÓN DEL MODULO*/
 module.exports = app;

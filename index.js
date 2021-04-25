@@ -4,7 +4,7 @@ require('dotenv').config({path: '../src/var.env'});
 
 const mongoose = require('mongoose');
 const app = require('./app')
-const port = 3900;
+
 
 
 mongoose.set('useFindAndModify', false);
